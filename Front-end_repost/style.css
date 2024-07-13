@@ -1,0 +1,68 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: Arial;
+   background-image: url(img/Imagen2.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center +15%;
+}
+.titulo_rosa{
+   position: absolute;
+   top: 3%;
+   left: 50%;
+   transform: translate(-50%);
+   width: 1000px;
+   height: 200px;
+}
+.opciones{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 300px;
+   background-color: #B23A48;
+   border-radius: 20px;
+}
+.opciones h1{
+   text-align: center;
+   font-weight: bolder;
+   font-size: 300%;
+   color: #461220;
+   padding: 0 0 auto 0;
+}
+.boton1{
+display: block;
+margin: 0 25px 20px 25px;
+width: 250px;
+height: 50px;
+background: none;
+border: 2px solid #461220;
+border-radius: 30px;
+text-decoration: none;
+font-size: x-large;
+font-weight: bolder;
+color: #461220;
+cursor: pointer;
+outline: none;
+text-align: center;
+line-height: 50px;
+}
+
+.boton2{
+   display: block;
+   margin: 0 auto 20px auto;
+   width: 250px;
+   height: 50px;
+   background: #461220;
+   border: 2px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-size: x-large;
+   font-weight: bolder;
+   color: #B23A48;
+   cursor: pointer;
+   outline: none;
+   text-align:center;
+   line-height: 50px;
+   }

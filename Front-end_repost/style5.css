@@ -1,0 +1,263 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: Arial;
+   background-image: url(img/fondo1.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center +15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+}
+.titulo{
+   position: absolute;
+   display: block;
+   left: 50%;
+   top: 5%;
+   transform: translate(-50%, -20%);
+   height: 150px;
+   width: 650px;
+}
+.container {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top:25%;
+   left: 10%;
+   transform: translate(0, -10%);
+   justify-content: space-around;
+}
+
+.cuadrado {
+   width: 400px;
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+   margin-right: 20px; /* Espacio entre el cuadrado y las barras */
+   border-radius: 25px;
+}
+
+.cuadrado img {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   transition: opacity 1s ease; /* Transición de desvanecimiento */
+}
+
+.cuadrado img.mostrar {
+   opacity: 1;
+}
+
+.barras {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 200px;
+}
+
+.barra {
+   width: 15px;
+   height: 50px;
+   border-radius: 12.5px;
+   background-color: #FED0BB; /* Color inicial */
+   transition: background-color 0.5s ease; /* Transición de cambio de color */
+}
+
+.barra.activa {
+   background-color: #e25364; /* Color activo */
+}
+.cuadro-texto {
+   width: 200px;
+   height: 500px;
+   border: 2px transparent; /* Borde del cuadro de texto */
+   border-radius: 15px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   margin-left: 20px;
+   background-color: white;
+}
+
+.cuadro-texto p {
+   margin: 10px 0;
+   font-size: 20px;
+   text-align: center;
+}
+.cuadro-contenedor {
+   margin: 20px;
+   height: 500px;
+   width: 400px;
+   border: 2px transparent;
+   border-radius: 15px;
+   padding: 20px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   background-color: #8C2F39;
+}
+
+.cuadro-contenedor select,
+.cuadro-contenedor input {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   background: none;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #ff69b4;
+   box-sizing: border-box;
+   font-family: Arial;
+   font-size: medium;
+   font-weight: bold;
+   color: black;
+}
+
+.cuadro-contenedor .boton-agregar {
+   background-color: #ff69b4;
+   width: 80px;
+   height: 25px;
+   color: white;
+   cursor: pointer;
+   border-radius: 25px;
+   border-color: transparent;
+   transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Cambio de color al hacer clic */
+.cuadro-contenedor .boton-agregar:active {
+   background-color: #722150; /* Un color más oscuro */
+}
+
+/* Aumenta el tamaño al pasar el cursor */
+.cuadro-contenedor .boton-agregar:hover {
+   transform: scale(1.1); /* Aumenta un 10% de tamaño */
+}
+
+
+.cuadro-contenedor input {
+   height: 30px;
+}
+
+.cuadro-contenedor .boton-agregar {
+   background-color: #ff69b4;
+   width: 80px;
+   height: 25px;
+   color: white;
+   cursor: pointer;
+   border-radius: 25px;
+}
+
+.cuadro-contenedor .metodo-pago {
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+/* Estilos para animar las etiquetas */
+.nombre_producto,
+.cantidad_producto,
+.MetodoPago,
+.cambio {
+   position: relative;
+   margin-bottom: 20px;
+}
+
+/* Estilo base para las etiquetas */
+.nombre_producto label,
+.cantidad_producto label,
+.MetodoPago label,
+.cambio label {
+   position: absolute;
+   top: 10px; /* Posición inicial de la etiqueta */
+   left: 10px; /* Ajusta según sea necesario */
+   color: #fed0bb;
+   font-size: 20px;
+   font-weight: bold;
+   pointer-events: none;
+   transition: 0.5s;
+}
+.cambio label{
+   top: -5%;
+}
+
+/* Estilo para cuando el select o input está enfocado o tiene un valor */
+.nombre_producto select:focus + label,
+.nombre_producto select:valid + label,
+.cantidad_producto select:focus + label,
+.cantidad_producto select:valid + label,
+.MetodoPago select:focus + label,
+.MetodoPago select:valid + label,
+.cambio input:focus + label,
+.cambio input:not(:placeholder-shown) + label {
+   top: -12px; /* Mueve la etiqueta hacia arriba */
+   color: #e25364; /* Color de la etiqueta activa */
+   font-size: 20px; /* Tamaño de la fuente de la etiqueta activa */
+}
+
+
+/* Estilo base para la línea */
+.nombre_producto span::before,
+.cantidad_producto span::before,
+.MetodoPago span::before,
+.cambio span::before {
+   content: '';
+   position: absolute;
+   bottom: -2px;
+   left: 0;
+   width: 0; /* Comienza desde 0 */
+   height: 2px;
+   background: #461220;
+   transition: 0.5s;
+}
+
+
+/* Expande la línea cuando el select o input está enfocado o tiene un valor */
+.nombre_producto select:focus + span::before,
+.nombre_producto select:valid + span::before,
+.cantidad_producto select:focus + span::before,
+.cantidad_producto select:valid + span::before,
+.MetodoPago select:focus + span::before,
+.MetodoPago select:valid + span::before,
+.cambio input:focus + span::before,
+.cambio input:not(:placeholder-shown) + span::before {
+   width: 100%;
+}
+.cambio label {
+   position: absolute;
+   top: -3px; /* Posición inicial de la etiqueta */
+   left: 10px; /* Ajusta según sea necesario */
+   color: #fed0bb;
+   font-size: 20px;
+   font-weight: bold;
+   pointer-events: none;
+   transition: 0.5s;
+}
+
+/* Estilo para cuando el input está enfocado */
+.cambio input:focus + label,
+.cambio input:not(:placeholder-shown) + label {
+    top: -20px; /* Mueve la etiqueta 10px hacia arriba */
+    color: #e25364; /* Color de la etiqueta activa */
+    font-size: 20px; /* Tamaño de la fuente de la etiqueta activa */
+}
+
+
+/* Estilo base para la línea */
+.cambio span::before {
+   content: '';
+   position: absolute;
+   bottom: -2px;
+   left: 0;
+   width: 0; /* Comienza desde 0 */
+   height: 2px;
+   background: #461220;
+   transition: 0.5s;
+}

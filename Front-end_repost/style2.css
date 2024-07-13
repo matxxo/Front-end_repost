@@ -1,0 +1,185 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: Arial;
+   background-image: url(img/Imagen1.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center +15%;
+}
+.titulo_cafe{
+   position: absolute;
+   display: block;
+   transform: translate(-5%, -5%);
+   width: 1300px;
+   height: 300px;
+   text-align: left;
+}
+.formulario{
+   position: absolute;
+   top: 25%;
+   left: 5%;
+}
+.formulario h1{
+   transform: translate(-15%);
+}
+.formulario form{
+   padding: 0 40px;
+   box-sizing: border-box;
+}
+form .username{
+position: relative;
+border-bottom: 2px solid #FED0BB;
+margin: 30px 0;
+}
+
+.username input{
+position: relative;
+top: 2px;
+width : 100%;
+padding: 0 5px;
+height: 40px;
+font-size: 16px;
+font-family: Arial;
+border: none;
+background: none;
+outline: none;
+}
+
+.username label{
+position:absolute;
+top: 50%;
+color: #fed0bb;
+transform: translateY(-20%);
+font-size: 20px;
+font-weight: bold;
+pointer-events: none;
+transition: .5s;
+}
+.username input:focus ~ label,
+.username input:not(:placeholder-shown):valid ~ label {
+    top: -5px;
+    color: #461220;
+    font-weight: bold;
+}
+
+.username span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #461220;
+    transition: .5s;
+}
+
+.username input:focus ~ span::before,
+.username input:not(:placeholder-shown):valid ~ span::before {
+    width: 100%;
+}
+
+form .contrasena{
+   position: relative;
+   border-bottom: 2px solid #FED0BB;
+   margin: 30px 0;
+   }
+   
+   .contrasena input{
+   position: relative;
+   top: 2px;
+   width : 100%;
+   padding: 0 5px;
+   height: 40px;
+   font-size: 16px;
+   border: none;
+   background: none;
+   outline: none;
+   }
+   
+   .contrasena label{
+   position:absolute;
+   top: 50%;
+   color: #fed0bb;
+   transform: translateY(-20%);
+   font-size: 20px;
+   font-weight: bold;
+   pointer-events: none;
+   transition: .5s;
+   }
+   .contrasena input:focus ~ label,
+   .contrasena input:not(:placeholder-shown):valid ~ label {
+       top: -5px;
+       color: #461220;
+       font-weight: bold;
+   }
+   
+   .contrasena span::before {
+       content: '';
+       position: absolute;
+       top: 40px;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background: #461220;
+       transition: .5s;
+   }
+   
+   .contrasena input:focus ~ span::before,
+   .contrasena input:not(:placeholder-shown):valid ~ span::before {
+       width: 100%;
+   }
+   
+
+   .recordar{
+      display: block;
+      margin: 0 25px 5px 25px;
+      width: 250px;
+      height: 50px;
+      background: none;
+      border: 2px solid #461220;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: large;
+      font-weight: bolder;
+      color: #461220;
+      cursor: pointer;
+      outline: none;
+      text-align: center;
+      line-height: 50px;
+      }
+
+      .submit{
+         display: block;
+      margin: 0 25px 5px 25px;
+      width: 250px;
+      height: 50px;
+      background: #461220;
+      border: 2px solid #461220;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: large;
+      font-weight: bolder;
+      color: #fed0bb;
+      cursor: pointer;
+      outline: none;
+      text-align: center;
+      line-height: 50px;
+      }
+.registrarse{
+         display: block;
+      margin: 0 25px 5px 25px;
+      width: 250px;
+      height: 50px;
+      background: none;
+      border: 2px solid #461220;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: large;
+      font-weight: bolder;
+      color: #461220;
+      cursor: pointer;
+      outline: none;
+      text-align: center;
+      line-height: 50px;
+}

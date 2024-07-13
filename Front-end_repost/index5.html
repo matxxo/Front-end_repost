@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>funcion1 DeliceGourmand</title>
+   <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+   <img class="titulo" src="img/gerar_pedidotitulo.png" alt="Título">
+   <div class="container">
+      <div class="cuadrado" id="cuadrado">
+            <img src="img/cupcakes-chocolate-rosa.jpg" alt="cupcakes-chocolate-rosa" class="mostrar">
+      </div>
+      <div class="barras">
+            <div class="barra" id="barra1"></div>
+            <div class="barra" id="barra2"></div>
+            <div class="barra" id="barra3"></div>
+      </div>
+      <div class="cuadro-texto">
+            <p>Producto seleccionado:</p>
+            <p>___________</p>
+            <p>Precio:</p>
+            <p>___________</p>
+      </div>
+      <form class="cuadro-contenedor">
+        <div class="nombre_producto">
+            <select required>
+                <option value="" selected></option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+            </select>
+            <label>nombre de Producto</label>
+            <span></span>
+        </div>
+        <div class="cantidad_producto">
+            <select required>
+                <option value="" selected></option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+            </select>
+            <label>cantidad</label>
+            <span></span>
+        </div>
+        <button class="boton-agregar">agregar</button>
+        <div class="MetodoPago">
+            <select required>
+                <option value="" selected></option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+            </select>
+            <label>Metodo de Pago</label>
+            <span></span>
+        </div>
+        <div class="cambio">
+            <input type="text" placeholder="" required>
+            <label>cambio</label>
+            <span></span>
+        </div>
+    </form>
+    
+
+
+   <script>
+      var imagenes = ["cupcakes-chocolate-rosa.jpg", "torta-de-chocolate-7.jpg", "solo-rollo-canela-hojaldre_974713-6.jpg"];
+      var indice = 0;
+      var cuadrado = document.getElementById("cuadrado");
+      var imagen = cuadrado.querySelector("img");
+
+      function cambiarImagen() {
+         indice = (indice + 1) % imagenes.length;
+         var nuevaImagen = new Image();
+         nuevaImagen.src = "img/" + imagenes[indice];
+         nuevaImagen.alt = "Imagen " + (indice + 1);
+         nuevaImagen.onload = function() {
+               imagen.classList.remove("mostrar"); // Oculta la imagen actual
+               imagen = nuevaImagen;
+               cuadrado.appendChild(imagen); // Añade la nueva imagen al cuadrado
+               setTimeout(function() {
+                   imagen.classList.add("mostrar"); // Muestra suavemente la nueva imagen
+               }, 50);
+         };
+      }
+
+      setInterval(cambiarImagen, 2000);
+
+      var barras = document.querySelectorAll(".barra");
+      var indiceBarra = 0;
+
+      function cambiarColorBarras() {
+         barras.forEach((barra, index) => {
+               if (index === indiceBarra) {
+                  barra.classList.add("activa");
+               } else {
+                  barra.classList.remove("activa");
+               }
+         });
+         indiceBarra = (indiceBarra + 1) % barras.length;
+      }
+
+      setInterval(cambiarColorBarras, 2000);
+   </script>
+</body>
+</html>

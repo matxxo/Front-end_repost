@@ -1,0 +1,64 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: Arial;
+   background-image: url(img/fondo1.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center +15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+}
+.titulo{
+   position: absolute;
+   display: block;
+   left: 50%;
+   top: 5%;
+   transform: translate(-50%);
+   height: 225px;
+   width: 700px;
+}
+.button-container {
+   display: flex;
+   gap: 10px; /* Espacio entre los botones */
+   position: absolute;
+   top: 35%;
+   transition: transform 0.3s ease;
+}
+.button-container button {
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+}
+.button-container button img {
+   width: 250px;  /* Ajusta el tamaño según tus necesidades */
+   height: 325px; /* Ajusta el tamaño según tus necesidades */
+}
+.button-container .image-button1 img {
+   width: 220px;
+}
+.button-container button:hover {
+   transform: scale(1.05); /* Agrandar el botón en un 5% cuando se pasa el cursor sobre él */
+}
+.button-separado {
+   position: absolute;
+   top: 85%;
+   margin-top: 10px; /* Ajusta el espacio según tus necesidades */
+   transition: transform 0.3s ease;
+}
+.button-separado  button{
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+}
+.button-separado  button img{
+   width: 200px;  /* Ajusta el tamaño según tus necesidades */
+   height: 75px;
+}
+.button-separado button:hover {
+   transform: scale(1.05); /* Agrandar el botón en un 5% cuando se pasa el cursor sobre él */
+}
